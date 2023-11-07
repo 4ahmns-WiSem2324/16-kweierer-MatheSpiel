@@ -37,35 +37,7 @@ public class Calculator : MonoBehaviour
     {
         if (float.TryParse(input, out num2))
         {
-            float result = 0f;
-            switch (currentOperation)
-            {
-                case Operation.Add:
-                    result = num1 + num2;
-                    break;
-                case Operation.Subtract:
-                    result = num1 - num2;
-                    break;
-                case Operation.Multiply:
-                    result = num1 * num2;
-                    break;
-                case Operation.Divide:
-                    if (num2 != 0)
-                    {
-                        result = num1 / num2;
-                    }
-                    else
-                    {
-                        resultText.text = "Division durch Null!";
-                        return;
-                    }
-                    break;
-                case Operation.None:
-                    result = num2; 
-                    break;
-            }
-
-            resultText.text = "Ergebnis: " + result.ToString();
+            CalculateResult();
         }
         else
         {
@@ -73,8 +45,66 @@ public class Calculator : MonoBehaviour
         }
     }
 
-    public void SetOperation(int operation)
+    private void CalculateResult()
     {
-        currentOperation = (Operation)operation;
+        float result = 0f;
+        switch (currentOperation)
+        {
+            case Operation.Add:
+                result = num1 + num2;
+                break;
+            case Operation.Subtract:
+                result = num1 - num2;
+                break;
+            case Operation.Multiply:
+                result = num1 * num2;
+                break;
+            case Operation.Divide:
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                }
+                else
+                {
+                    resultText.text = "Division durch Null!";
+                    return;
+                }
+                break;
+            case Operation.None:
+                result = num2;
+                break;
+        }
+
+        resultText.text = "Ergebnis: " + result.ToString();
+    }
+
+    public void SetOperation(string operation)
+    {
+        switch (operation)
+        {
+            case "+":
+                currentOperation = Operation.Add;
+                break;
+            case "-":
+                currentOperation = Operation.Subtract;
+                break;
+            case "*":
+                currentOperation = Operation.Multiply;
+                break;
+            case "/":
+                currentOperation = Operation.Divide;
+                break;
+            default:
+                currentOperation = Operation.None;
+                break;
+        }
+    }
+
+    public void ClearFields()
+    {
+        inputField1.text = "";
+        inputField2.text = "";
+        resultText.text = "Ergebnis: ";
+        currentOperation = Operation.None;
     }
 }
