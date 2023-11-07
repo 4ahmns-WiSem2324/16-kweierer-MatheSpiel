@@ -1,1 +1,17 @@
 # ReadMe
+
+In diesem Projekt war es die Aufgabe das wir ein Mathespiel erstellen.
+Die Funktion der App ist es Kindern das umgehen mit Zahlen näher zu bringen. 
+
+In diesem Projekt habe ich die Grundmodalitäten für die Grund App umgesetzt. 
+Das heißt ich habe diese Funktionen eingefügt: 
+1. Eine Random Number wird angezeigt, der Nutzer muss entscheiden ob es eine Zahl mit der Eigenschaft (Ganz, Natürlich, ....) ist oder nicht (Drücken eines Buttons JA oder Nein). 
+1. Der Nutzer kann eine Zahl eingeben über Inputfield. Es wird geprüft ob es eine Zahl mit bestimmten Eigenschaften ist. Der Nutzer bekommt rudimentäres Feedback, warum/warum es keine Primzahl ist.
+1. Der Nutzer kann eine Zahl eingeben über Tastatur. Es wird geprüft ob es eine Zahl mit bestimmten Eigenschaften ist. Der Nutzer bekommt rudimentäres Feedback zur Zahl 
+
+Dazu habe ich Whiteboxing und eine Grafische Aufbereitung umgesetzt. 
+Sounds sind ebenfalls implementiert. 
+
+Meine Projektstruktur sowie mein Code sind effizient und Clean geschrieben und sortiert. 
+
+Ich habe ein Video zur Veranschaulichung hochgeladen. 
